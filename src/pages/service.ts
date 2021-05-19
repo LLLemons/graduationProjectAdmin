@@ -55,7 +55,9 @@ const IndexService = {
   },
   async queryOrder() {
     const url = `/api/all-order`;
-    return httpGet(url);
+    return httpGet(url, {
+      admin: true
+    });
   },
   async consignmentGood(data) {
     const url = `/api/order`;
